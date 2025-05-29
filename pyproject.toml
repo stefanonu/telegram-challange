@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "telegram_challange"
+version = "0.1.0"
+description = "A simple job scheduler"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.111.0"
+uvicorn = { extras = ["standard"], version = "^0.30.0" }
+sqlalchemy = "^2.0"
+pydantic = "^2.6"
+python-pptx = "^0.6.21"
+sentence-transformers = "^2.6.1"
+faiss-cpu = "^1.7.4"
+pydantic-settings = "^2.9.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+isort = "^5.13.2"
+mypy = "^1.9.0"
+alembic = "^1.16.1"
+pytest = "^8.3.5"
+pytest-asyncio = "^1.0.0"
+httpx = "^0.28.1"
+asgi-lifespan = "^2.1.0"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
